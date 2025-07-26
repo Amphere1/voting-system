@@ -224,7 +224,7 @@ export default function VoterAuth() {
         </nav>
       </header>
 
-      <div className="flex-1 flex items-center justify-center px-6 py-12">
+      <div className="flex-1 flex items-center justify-center px-2 sm:px-6 py-6 sm:py-12">
         <div className="w-full max-w-md">
           {/* Toggle Buttons */}
           <div className="bg-white/60 backdrop-blur rounded-2xl p-2 mb-8 shadow-sm border border-blue-200">
@@ -251,10 +251,10 @@ export default function VoterAuth() {
           </div>
 
           {/* Main Form Card */}
-          <div className="bg-white/80 backdrop-blur rounded-2xl shadow-lg border border-blue-200 p-8">
+          <div className="bg-white/80 backdrop-blur rounded-2xl shadow-lg border border-blue-200 p-4 sm:p-8">
             {/* Header */}
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-blue-900 mb-2">
+            <div className="text-center mb-6 sm:mb-8">
+              <h1 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-2">
                 {isLogin ? 'Voter Login' : 'Voter Registration'}
               </h1>
               <p className="text-blue-600">
@@ -389,7 +389,7 @@ export default function VoterAuth() {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-blue-900 font-semibold mb-2">
+                    <label htmlFor="phone" className="block text-blue-900 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">
                       Phone Number *
                     </label>
                     <div className="relative">
@@ -409,9 +409,9 @@ export default function VoterAuth() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                     <div>
-                      <label htmlFor="age" className="block text-blue-900 font-semibold mb-2">
+                      <label htmlFor="age" className="block text-blue-900 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">
                         Age *
                       </label>
                       <input
@@ -422,12 +422,12 @@ export default function VoterAuth() {
                         onChange={handleChange}
                         placeholder="18"
                         min="18"
-                        className="w-full px-4 py-3 rounded-xl border border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                        className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-xl border border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm sm:text-base"
                         required
                       />
                     </div>
                     <div>
-                      <label htmlFor="idNumber" className="block text-blue-900 font-semibold mb-2">
+                      <label htmlFor="idNumber" className="block text-blue-900 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">
                         ID Number *
                       </label>
                       <input
@@ -444,7 +444,7 @@ export default function VoterAuth() {
                   </div>
 
                   <div>
-                    <label htmlFor="address" className="block text-blue-900 font-semibold mb-2">
+                    <label htmlFor="address" className="block text-blue-900 font-semibold mb-1 sm:mb-2 text-sm sm:text-base">
                       Address *
                     </label>
                     <textarea
@@ -454,14 +454,14 @@ export default function VoterAuth() {
                       onChange={handleChange}
                       placeholder="Enter your complete address"
                       rows="3"
-                      className="w-full px-4 py-3 rounded-xl border border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 rounded-xl border border-blue-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none text-sm sm:text-base"
                       required
                     />
                   </div>
 
                   {/* Terms and Conditions */}
-                  <div className="bg-blue-50/50 rounded-xl p-4">
-                    <label className="flex items-start gap-3">
+                  <div className="bg-blue-50/50 rounded-xl p-2 sm:p-4">
+                    <label className="flex items-start gap-2 sm:gap-3">
                       <input type="checkbox" required className="w-4 h-4 text-blue-600 border-blue-300 rounded focus:ring-blue-500 mt-1" />
                       <span className="text-blue-800 text-sm">
                         I confirm that I am eligible to vote and all information provided is accurate.
@@ -470,7 +470,7 @@ export default function VoterAuth() {
                     </label>
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                     <button
                       type="button"
                       onClick={() => setStep(1)}
@@ -491,12 +491,12 @@ export default function VoterAuth() {
             </form>
 
             {/* Footer Links */}
-            <div className="mt-8 text-center">
-              <p className="text-blue-600 text-sm">
+            <div className="mt-6 sm:mt-8 text-center">
+              <p className="text-blue-600 text-xs sm:text-sm">
                 {isLogin ? "Don't have an account? " : "Already have an account? "}
                 <button
                   onClick={switchMode}
-                  className="text-blue-600 hover:text-blue-800 font-medium underline"
+                  className="text-blue-600 hover:text-blue-800 font-medium underline text-xs sm:text-sm"
                 >
                   {isLogin ? 'Register here' : 'Login here'}
                 </button>
@@ -505,12 +505,12 @@ export default function VoterAuth() {
           </div>
 
           {/* Help Section */}
-          <div className="mt-8 bg-blue-50/50 backdrop-blur rounded-2xl p-6 border border-blue-200">
-            <h3 className="text-lg font-semibold text-blue-900 mb-3 text-center">Need Help?</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div className="mt-6 sm:mt-8 bg-blue-50/50 backdrop-blur rounded-2xl p-4 sm:p-6 border border-blue-200">
+            <h3 className="text-base sm:text-lg font-semibold text-blue-900 mb-2 sm:mb-3 text-center">Need Help?</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 text-xs sm:text-sm">
               <div className="text-center">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
@@ -518,8 +518,8 @@ export default function VoterAuth() {
                 <div className="text-blue-700">(555) 123-VOTE</div>
               </div>
               <div className="text-center">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
